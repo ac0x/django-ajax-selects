@@ -28,16 +28,14 @@ def _to_number(got):
 
 
 def _media(self):
-    # unless AJAX_SELECT_BOOTSTRAP == False
-    # then load jquery and jquery ui + default css
-    # where needed
-    js = ('ajax_select/js/bootstrap.js', 'ajax_select/js/ajax_select.js')
-    try:
-        if not settings.AJAX_SELECT_BOOTSTRAP:
-            js = ('ajax_select/js/ajax_select.js',)
-    except AttributeError:
-        pass
-    return forms.Media(css={'all': ('ajax_select/css/ajax_select.css',)}, js=js)
+    js = ('ajax_select/jquery/jquery.min.js',
+          'ajax_select/jquery/ui/jquery-ui.js',
+          'ajax_select/js/ajax_select.js',
+          'ajax_select/js/sortable.js')
+
+    return forms.Media(css={'all': ('ajax_select/css/ajax_select.css',
+                                    'ajax_select/jquery/ui/themes/smoothness/jquery-ui.css')},
+                       js=js)
 
 
 ####################################################################################
