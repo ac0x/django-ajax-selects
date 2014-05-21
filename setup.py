@@ -9,7 +9,7 @@ except ImportError:
 
 setup(
     name='django-ajax-selects',
-    version='1.3.4',
+    version='1.4.0-mdh',
     description='jQuery-powered auto-complete fields for editing ForeignKey, ManyToManyField and CharField',
     author='crucialfelix',
     author_email='crucialfelix@gmail.com',
