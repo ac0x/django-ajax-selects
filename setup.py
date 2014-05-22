@@ -22,6 +22,7 @@ setup(
             'static/ajax_select/css/*',
             'static/ajax_select/images/*',
             'static/ajax_select/js/*',
+	    'static/ajax_select/jquery/*',
             'templates/*.html',
             'templates/ajax_select/*.html'
         ]
