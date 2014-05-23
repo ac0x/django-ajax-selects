@@ -22,7 +22,10 @@ setup(
             'static/ajax_select/css/*',
             'static/ajax_select/images/*',
             'static/ajax_select/js/*',
-	    'static/ajax_select/jquery/*',
+	    'static/ajax_select/jquery/*.js',
+	    'static/ajax_select/jquery/ui/*.js',
+            'static/ajax_select/jquery/ui/themes/smoothness/*.css',
+	    'static/ajax_select/jquery/ui/themes/smoothness/images/*',
             'templates/*.html',
             'templates/ajax_select/*.html'
         ]
