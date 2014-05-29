@@ -131,6 +131,9 @@ class AutoCompleteSelectField(forms.fields.CharField):
             kwargs["widget"] = AutoCompleteSelectWidget(**widget_kwargs)
         super(AutoCompleteSelectField, self).__init__(max_length=255, *args, **kwargs)
 
+    def to_python(self, value):
+        return value
+
     def clean(self, value):
         if value:
             lookup = get_lookup(self.channel)
@@ -287,6 +290,9 @@ class AutoCompleteSelectMultipleField(forms.fields.CharField):
         if IS_PYTHON2:
             return type(help_text) == unicode
         return type(help_text) == str
+
+    def to_python(self, value):
+        return value
 
     def clean(self, value):
         if not value and self.required:
