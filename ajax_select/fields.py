@@ -28,13 +28,9 @@ def _to_number(got):
 
 
 def _media(self):
-    js = ('ajax_select/jquery/jquery.min.js',
-          'ajax_select/jquery/ui/jquery-ui.js',
-          'ajax_select/js/ajax_select.js',
+    js = ('ajax_select/js/ajax_select.js',
           'ajax_select/js/sortable.js')
-
-    return forms.Media(css={'all': ('ajax_select/css/ajax_select.css',
-                                    'ajax_select/jquery/ui/themes/smoothness/jquery-ui.css')},
+    return forms.Media(css={'all': ('ajax_select/css/ajax_select.css',)},
                        js=js)
 
 
